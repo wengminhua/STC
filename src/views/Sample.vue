@@ -1,4 +1,5 @@
 <template>
+  https://www.vibecast.com/?ref=madewithvuejs.com
   <v-container>
     <v-layout
       text-xs-center
