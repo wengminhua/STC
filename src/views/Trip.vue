@@ -5,7 +5,7 @@
       wrap
     >
       <top-bar
-        channel="home"
+        channel="trip"
       >
       </top-bar>
     </v-layout>

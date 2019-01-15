@@ -5,7 +5,7 @@
       wrap
     >
       <top-bar
-        channel="home"
+        channel="expo"
       >
       </top-bar>
     </v-layout>
