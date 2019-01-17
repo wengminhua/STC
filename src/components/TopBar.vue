@@ -1,7 +1,7 @@
 <template>
   <section
     class="top-banner"
-    style="background-image: url({{ bgImage }});"
+    :style="backgroundStyle"
   >
     <div class="topbar">
       <span
@@ -32,50 +32,62 @@
 <script>
   export default {
     data () {
+      let allChannels = [
+        {
+          code: 'home',
+          name: '首页',
+          bgImage: '/imgs/top_banner_bg_home.jpg'
+        },
+        {
+          code: 'expo',
+          name: '展会',
+          bgImage: '/imgs/top_banner_bg_expo.jpg'
+        },
+        {
+          code: 'trip',
+          name: '旅游',
+          bgImage: '/imgs/top_banner_bg_trip.jpg'
+        },
+        {
+          code: 'hotel',
+          name: '合作伙伴',
+          bgImage: '/imgs/top_banner_bg_hotel.jpg'
+        }
+      ];
+      let activeIdx = null;
+      allChannels.forEach((channel, idx) => {
+        if(channel.code == this.channel) {
+          activeIdx = idx;
+        }
+      });
       return {
-        active: 'home',
-        channels: [
-          {
-            code: 'home',
-            name: '首页',
-            bgImage: '/imgs/home_top_banner_bg.jpg'
-          },
-          {
-            code: 'expo',
-            name: '展会',
-            bgImage: '/imgs/expo_top_banner_bg.jpg'
-          },
-          {
-            code: 'trip',
-            name: '旅游',
-            bgImage: '/imgs/trip_top_banner_bg.jpg'
-          },
-          {
-            code: 'hotel',
-            name: '合作伙伴',
-            bgImage: '/imgs/hotel_top_banner_bg.jpg'
-          }
-        ]
+        active: activeIdx,
+        channels: allChannels
       }
     },
     props: [
       'channel'
     ],
+    watch: {
+      active(val) {
+        this.$router.push({ path: '/' + this.channels[val].code });
+      }
+    },
     computed: {
-      bgImage() {
+      backgroundStyle() {
         let image = '';
         this.channels.forEach((channel) => {
-          if(channel.code == this.active) {
+          if(channel.code == this.channel) {
             image = channel.bgImage;
           }
         })
-        return image;
+        return "background-image: url(" + image + ");"
       }
     }
   }
 </script>
 
-<style scoped>
+<style>
   .top-banner {
     background-color: #111;
     background-position-x: 50%;
