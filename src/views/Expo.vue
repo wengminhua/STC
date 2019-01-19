@@ -8,12 +8,16 @@
         channel="expo"
       >
       </top-bar>
+      <banner1></banner1>
+      <banner2></banner2>
     </v-layout>
   </v-container>
 </template>
 
 <script>
   import TopBar from '../components/TopBar'
+  import Banner1 from '../components/ExpoBanner1'
+  import Banner2 from '../components/ExpoBanner2'
 
   export default {
     data () {
@@ -22,7 +26,9 @@
       }
     },
     components: {
-      "top-bar": TopBar
+      'top-bar': TopBar,
+      'banner1': Banner1,
+      'banner2': Banner2
     },
   }
 </script>

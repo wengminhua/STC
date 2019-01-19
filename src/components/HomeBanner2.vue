@@ -68,7 +68,7 @@ export default {
 
 .slzh .main-title {
   color: #FFF;
-  font-size: 34px;
+  font-size: 30px;
   margin-top: 20px;
   font-weight: bold;
 }

@@ -89,7 +89,7 @@ export default {
 }
 
 .fwzz .main-title {
-  font-size: 34px;
+  font-size: 30px;
   margin-top: 20px;
   margin-bottom: 100px;
   font-weight: bold;
