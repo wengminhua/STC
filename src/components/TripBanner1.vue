@@ -28,7 +28,7 @@
                 class="card-title"
               >
                 <div>
-                  <div class="card-name">{{ viewpoint.name }}</div>
+                  <div class="card-name" style="margin-bottom: 5px">{{ viewpoint.name }}</div>
                   <div class="card-location">{{ viewpoint.location }}</div>
                 </div>
               </v-card-title>
