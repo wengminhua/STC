@@ -94,7 +94,7 @@
     background-position-y: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 613px;
+    height: 550px;
     position: relative;
     min-width: 720px;
     width: 100%;
