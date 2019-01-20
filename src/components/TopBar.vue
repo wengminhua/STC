@@ -83,6 +83,8 @@
         })
         return "background-image: url(" + image + ");"
       }
+    },
+    methods: {
     }
   }
 </script>

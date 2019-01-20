@@ -2,13 +2,16 @@
   <section
     class="bottom-banner"
   >
-    <div class="bottombar">
+  <div class="bottombar">
+    <v-container grid-list-xs>
+      <v-layout row wrap>
+
       <v-flex xs4>
         <v-card
           dark
           flat
           color="#151515"
-          style="margin-top: 150px"
+          style="margin-top: 30px"
         >
           <v-card-text>
             <div style="text-align: left">
@@ -27,7 +30,7 @@
           dark
           flat
           color="#151515"
-          style="margin-top: 150px"
+          style="margin-top: 30px"
         >
           <v-card-text>
             <div style="text-align: left">
@@ -45,7 +48,7 @@
           dark
           flat
           color="#151515"
-          style="margin-top: 150px"
+          style="margin-top: 30px"
         >
           <v-card-text>
             <div style="text-align: left">
@@ -59,6 +62,9 @@
           </v-card-text>
         </v-card>
       </v-flex>
+
+  </v-layout>
+    </v-container>
     </div>
   </section>
 </template>

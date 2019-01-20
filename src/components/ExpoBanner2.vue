@@ -19,10 +19,12 @@
             xs12 md4
             style="padding: 15px"
            >
-            <v-img
-              :src="type.pic"
-            >
-            </v-img>
+            <a :href="'/#/expo-detail/'+type.type">
+              <v-img
+                :src="type.pic"
+              >
+              </v-img>
+            </a>
            </v-flex>
          </v-layout>
        </v-container>
@@ -37,21 +39,27 @@ export default {
     return {
       type_list: [
         {
+          type: 'jc',
           pic: '/imgs/expo_hzlx_1.jpg',
         },
         {
+          type: 'sp',
           pic: '/imgs/expo_hzlx_2.jpg',
         },
         {
+          type: 'wj',
           pic: '/imgs/expo_hzlx_3.jpg',
         },
         {
+          type: 'nt',
           pic: '/imgs/expo_hzlx_4.jpg',
         },
         {
+          type: 'sy',
           pic: '/imgs/expo_hzlx_5.jpg',
         },
         {
+          type: 'kt',
           pic: '/imgs/expo_hzlx_6.jpg',
         }
       ]
