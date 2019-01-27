@@ -10,7 +10,7 @@
        <v-container fluid grid-list-xs style="max-width: 1000px">
          <v-layout row wrap>
            <v-flex
-            v-for="hotel in hotel_list"
+            v-for="hotel in currentHotelList"
             :key="hotel.pic"
             d-flex
             xs12 md4
@@ -43,6 +43,12 @@
        </v-container>
      </v-flex>
    </v-layout>
+   <v-pagination
+    v-model="page"
+    :length="pageLength"
+    circle
+   >
+   </v-pagination>
   </section>
 </template>
 
@@ -50,6 +56,8 @@
 export default {
   data() {
     return {
+      page: 1,
+      pageSize: 9,
       hotel_list: [
         {
           pic: '/imgs/hotel_1.jpg',
@@ -125,6 +133,29 @@ export default {
         }
       ]
     }
+  },
+  computed: {
+    pageLength() {
+      let length = this.hotel_list.length;
+      if(length % this.pageSize > 0) {
+        return parseInt(length / this.pageSize) + 1;
+      } else {
+        return length / this.pageSize;
+      }
+    },
+    currentHotelList() {
+      let hotelList = this.hotel_list;
+      let start = (this.page - 1) * this.pageSize;
+      let end = this.page * this.pageSize;
+      if(hotelList.length < end) {
+        end = hotelList.length;
+      }
+      let result = [];
+      for(let idx=start; idx<end; idx++) {
+        result.push(hotelList[idx]);
+      }
+      return result;
+    }
   }
 }
 </script>
@@ -165,5 +196,10 @@ export default {
 
 .hotel .v-rating .v-icon {
   padding: 0px;
+}
+
+.primary {
+    background-color: #1867c0!important;
+    border-color: #1867c0!important;
 }
 </style>
