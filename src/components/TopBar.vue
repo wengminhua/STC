@@ -137,6 +137,6 @@
   }
 
   .theme--dark.v-tabs__bar {
-    background-color: transparent;
+    background-color: transparent !important;
   }
 </style>
