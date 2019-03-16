@@ -7,7 +7,7 @@
       <span
         class="topbar-logo"
       >
-        STC
+        Expo Tour Service
       </span>
       <div
         class="topbar-menu"
