@@ -4,6 +4,7 @@ import './plugins/vuetify'
 import App from './App.vue'
 import routes from './routes'
 import './assets/app.css'
+import 'material-design-icons/iconfont/material-icons.css'
 
 Vue.config.productionTip = false
 Vue.use(VueRouter)
