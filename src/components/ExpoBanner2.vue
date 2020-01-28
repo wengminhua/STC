@@ -39,28 +39,40 @@ export default {
     return {
       type_list: [
         {
-          type: 'jc',
+          type: 'jzjc',
           pic: '/imgs/expo_hzlx_1.jpg',
         },
         {
-          type: 'sp',
+          type: 'spxf',
           pic: '/imgs/expo_hzlx_2.jpg',
         },
         {
-          type: 'wj',
+          type: 'ktnt',
           pic: '/imgs/expo_hzlx_3.jpg',
         },
         {
-          type: 'nt',
+          type: 'syky',
           pic: '/imgs/expo_hzlx_4.jpg',
         },
         {
-          type: 'sy',
+          type: 'gcjx',
           pic: '/imgs/expo_hzlx_5.jpg',
         },
         {
-          type: 'kt',
+          type: 'dzdq',
           pic: '/imgs/expo_hzlx_6.jpg',
+        },
+        {
+          type: 'qcqp',
+          pic: '/imgs/expo_hzlx_7.jpg',
+        },
+        {
+          type: 'jtys',
+          pic: '/imgs/expo_hzlx_8.jpg',
+        },
+        {
+          type: 'dldw',
+          pic: '/imgs/expo_hzlx_9.jpg',
         }
       ]
     }

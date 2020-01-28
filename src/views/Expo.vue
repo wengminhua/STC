@@ -7,9 +7,9 @@
       <top-bar
         channel="expo"
       >
-      </top-bar>
-      <banner1></banner1>
+      </top-bar>      
       <banner2></banner2>
+      <banner1></banner1>
       <bottom-bar></bottom-bar>
     </v-layout>
   </v-container>
