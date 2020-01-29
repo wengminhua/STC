@@ -7,7 +7,12 @@
       <span
         class="topbar-logo"
       >
-        Expo Tour Service
+        <v-img
+          src="/imgs/logo_short.png"
+          height="60"
+          width="195"
+        >
+        </v-img>
       </span>
       <div
         class="topbar-menu"
@@ -126,7 +131,7 @@
   }
 
   .topbar-logo {
-    margin-bottom: 0;
+    padding-top: 20px;
     color: #FFF;
     font-size: 31px;
   }
